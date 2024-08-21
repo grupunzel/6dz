@@ -1,0 +1,49 @@
+#1 task
+# stri = input("Your string: ")
+# print(stri[::-1])
+
+#2 task
+import string
+# count1 = 0
+# count2 = 0
+# i = 0
+# while i < len(stri):
+#     if stri[i].isalpha():
+#         count1 += 1
+#     elif stri[i].isdigit():
+#         count2 += 1
+#     i += 1
+# print("Amount od digits =", count2)
+# print("Amount of letters =", count1)
+
+#3 task
+# sym = input("Enter a symbol you want to find: ")
+# i = 0
+# count = 0
+# while i < len(stri):
+#     if stri[i] == sym:
+#         count += 1
+#     i += 1
+# print("Amount of", sym, "=", count)
+
+#4 task
+# word = input("Enter a word you want to find: ")
+# print("Amount of", word, "in", stri, "=", stri.count(word))
+
+#5 task
+# word = input("Enter a word that you want to replace: ")
+# new_word = input("Enter a word that will be on that spot: ")
+# print(stri.replace(word, new_word))
+
+#6 task
+text = "Hello world!"
+print(text.title())
+count1 = 0
+count2 = 0
+i = 0
+while i < len(text):
+    if text[i].isdigit():
+        count1 += 1
+    elif text[i].isdigit():
+        count2 += 1
+    i += 1
