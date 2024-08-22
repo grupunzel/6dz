@@ -36,14 +36,22 @@ import string
 # print(stri.replace(word, new_word))
 
 #6 task
+import string
 text = "Hello world!"
 print(text.title())
 count1 = 0
 count2 = 0
+count3 = 0
 i = 0
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 while i < len(text):
     if text[i].isdigit():
         count1 += 1
-    elif text[i].isdigit():
+    elif text[i] in punctuations:
+        if text[i] == "!":
+            count3 += 1
         count2 += 1
     i += 1
+print("Amount of digits:", count1)
+print("Amount of punctuation marks:", count2)
+print("Amount of !:", count3)
