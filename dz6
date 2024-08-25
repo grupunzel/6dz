@@ -1,9 +1,11 @@
 #1 task
+#Пользователь вводит с клавиатуры строку. Произведите поворот строк и полученный результат выведите на экран.
 # stri = input("Your string: ")
 # print(stri[::-1])
 
 #2 task
-import string
+#Пользователь вводит с клавиатуры строку. Посчитайте количество букв, цифр в строке. Выведите оба количества на экран
+#import string
 # count1 = 0
 # count2 = 0
 # i = 0
@@ -17,6 +19,8 @@ import string
 # print("Amount of letters =", count1)
 
 #3 task
+#Пользователь вводит с клавиатуры строку и символ
+#для поиска. Посчитайте сколько раз в строке встречается искомый символ. Полученное число выведите на экран.
 # sym = input("Enter a symbol you want to find: ")
 # i = 0
 # count = 0
@@ -27,15 +31,24 @@ import string
 # print("Amount of", sym, "=", count)
 
 #4 task
+#Пользователь вводит с клавиатуры строку и слово для поиска. Посчитайте сколько раз в строке встречается искомое слово.
+#Полученное число выведите на экран.
 # word = input("Enter a word you want to find: ")
 # print("Amount of", word, "in", stri, "=", stri.count(word))
 
 #5 task
+#Пользователь вводит с клавиатуры строку, слово для поиска, слово для замены. Произведите в строке замену одного слова на
+#другое. Полученную строку отобразите на экране
 # word = input("Enter a word that you want to replace: ")
 # new_word = input("Enter a word that will be on that spot: ")
 # print(stri.replace(word, new_word))
 
 #6 task
+#Есть некоторый текст. Реализуйте следующую функциональность:
+#Изменить текст таким образом, чтобы каждое предложение начиналось с большой буквы;
+#Посчитайте сколько раз цифры встречаются в тексте;
+#Посчитайте сколько раз знаки препинания встречаются в тексте;
+#Посчитайте количество восклицательных знаков в тексте
 import string
 text = "Hello world!"
 print(text.title())
@@ -55,3 +68,62 @@ while i < len(text):
 print("Amount of digits:", count1)
 print("Amount of punctuation marks:", count2)
 print("Amount of !:", count3)
+
+#7 task
+#Пользователь с клавиатуры вводит элементы списка целых и некоторое число. Необходимо посчитать сколько раз данное число
+#присутствует в списке. Результат вывести на экран.
+list1 = input("Enter your list of nubers separeted by ,: ")
+list_new = list1.split(", ")
+num = input("Enter a number in list: ")
+print("Amount of", num, "in list:", list_new.count(num))
+
+#8 task
+#Пользователь вводит с клавиатуры строку. Проверьте является ли введенная строка палиндромом. Палиндром - слово или текст
+#которое читается одинаково слева направо и справа налево. Например, кок; А роза упала на лапу Азора; доход; А буду я у дуба.
+stri = input("Enter your string: ")
+if stri[::-1] == stri:
+    print("This string is a palindrom")
+else:
+    print("This string is not a palindrom")
+
+#9 task
+#Пользователь вводит с клавиатуры некоторый текст, после чегопользователь вводит список зарезервированных слов. Необходимо
+#найти в тексте все зарезервированные слова и изменить их регистр на верхний. Вывести на экран измененный текст.
+text = input("Enter your text: ")
+list1 = input("Enter the list of words (separated by ,): ")
+list_new = list1.split(", ")
+text_new = text.split()
+text1 = ''
+for i in range(len(text_new)):
+    if text_new[i] in list_new:
+        text_new[i] = text_new[i].upper()
+    text1 += text_new[i] + " "
+print(text1)
+
+#10 task
+#Есть некоторый текст. Посчитайте в этом тексте количество предложений и выведите на экран полученный результат.
+text = input("Enter your text: ")
+text_new = text.split(". ")
+print("Amount of sentenses:", len(text_new))
+
+#11 task
+#Пользователь вводит с клавиатуры арифметическое выражение. Например, 23+12. Необходимо вывести на экран результат
+#выражения. В нашем примере это 35. Арифметическое выражение может состоять только из трёх частей: число, операция, число.
+#Возможные операции: +, -,*,/
+pattern = '+*/-'
+text = input("Enter you text: ")
+i = 0
+while i < len(text):
+    if text[i] in pattern:
+        break
+    i += 1
+num1 = int(text[0:i])
+num2 = int(text[i+1:len(text)])
+if text[i] == "+":
+    print(text, "=", num1 + num2)
+elif text[i] == "-":
+    print(text, "=", num1 - num2)
+elif text[i] == "*":
+    print(text, "=", num1 * num2)
+else:
+    print(text, "=", num1 / num2)
